@@ -17,7 +17,6 @@ export const NewMovie = ({ onAdd }) => {
     event.preventDefault();
 
     const newMovie = {
-      id: imdbId.trim(),
       title: title.trim(),
       description: description.trim(),
       imgUrl: imgUrl.trim(),
