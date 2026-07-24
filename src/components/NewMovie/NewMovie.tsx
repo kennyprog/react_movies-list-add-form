@@ -13,7 +13,7 @@ export const NewMovie = ({ onAdd }) => {
   const isFormInvalid =
     !title.trim() || !imgUrl.trim() || !imdbUrl.trim() || !imdbId.trim();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
 
     const newMovie = {
@@ -44,7 +44,7 @@ export const NewMovie = ({ onAdd }) => {
         name="title"
         label="Title"
         value={title}
-        onChange={val => setTitle(val)}
+        onChange={value => setTitle(value)}
         required
       />
 
@@ -52,14 +52,14 @@ export const NewMovie = ({ onAdd }) => {
         name="description"
         label="Description"
         value={description}
-        onChange={val => setDescription(val)}
+        onChange={value => setDescription(value)}
       />
 
       <TextField
         name="imgUrl"
         label="Image URL"
         value={imgUrl}
-        onChange={val => setImgUrl(val)}
+        onChange={value => setImgUrl(value)}
         required
       />
 
@@ -67,7 +67,7 @@ export const NewMovie = ({ onAdd }) => {
         name="imdbUrl"
         label="Imdb URL"
         value={imdbUrl}
-        onChange={val => setImdbUrl(val)}
+        onChange={value => setImdbUrl(value)}
         required
       />
 
@@ -75,7 +75,7 @@ export const NewMovie = ({ onAdd }) => {
         name="imdbId"
         label="Imdb ID"
         value={imdbId}
-        onChange={val => setImdbId(val)}
+        onChange={value => setImdbId(value)}
         required
       />
 
